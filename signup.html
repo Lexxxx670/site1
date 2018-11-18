@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Регистрация</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	<script type="text/javascript" src="./resources/js/Data.js"></script>
+</head>
+<body>
+<div style="text-align: center;margin-left: 30%;margin-right: 30%;margin-top: 7%;background-color: yellowgreen">
+<form onsubmit="return valid()" >
+	<input type="text" name="lname" id="lname"  placeholder="Фамилия" required>
+	<input type="text" name="fname" id='fname' placeholder="Имя" required>
+	<input type="text" name="tname"  id='tname'  placeholder="Отчество">
+	<label for="dbirth">Дата рождения</label>
+	<input type="date" name="dbirth" id='dbirth'  placeholder="дата рождения" required="">
+	
+	<select  name="streat" id='streat'>
+	<option value="">Выберите город</option>
+	<script>
+	for (var i = 0; i < street.body.length; i++) 
+	{
+		
+		document.write("<option value='"+street.body[i].value+"'>"+street.body[i].name+"</option>");
+	}
+</script>
+	</select>
+	<input type="text" name="shkola" id='shkola'  placeholder="Школа" required="">
+	<textarea name="znaniya" id='znaniya'>Введите названия технологии с которыми вы знакомы лично! через запятую</textarea>
+	<select name='napralenie' id='napralenie' required="">
+		<option value="">Выберите направления для соревнования</option>
+		<script>
+	for (var i = 0; i < soevnovanoya_type.body.length; i++) 
+	{
+		
+		document.write("<option value='"+soevnovanoya_type.body[i].value+"'>"+soevnovanoya_type.body[i].name+"</option>");
+	}
+</script>
+	</select>
+	<input type="text" name="login"  placeholder="Логин" required id='login'>
+	<input type="password" name="password"  placeholder="Пароль"  id='password' required>
+	<input type="submit" value="Отправить"  required>
+</form>
+</div>
+<script>
+	
+	function getid(id)
+	{
+
+		return document.getElementById(id);
+	}
+
+	function valid() 
+	{
+		var fname=getid('fname').value;
+		var lname=getid('lname').value;
+		var tname=getid('tname').value;
+		var dbirth=getid('dbirth').value;
+		var streat=getid('streat').value;
+		var shkola=getid('shkola').value;
+		var znaniya=getid('znaniya').value;
+		var napralenie=getid('napralenie').value;
+		var login=getid('login').value;
+		var login=getid('password').value;
+
+if(fname.length>1&&lname.length>2&&dbirth.length>1&&streat.length>2&&shkola.length>1&&napralenie.length>0&&login.length>4&&password.length>4)
+{
+
+	alert('Спасибо за Регистрацию!');
+}else{
+
+	alert('Не правильные данные\r\nfname: '+fname+'\r\nlname '+lname+'\r\ntname: '+tname+'\r\ndbirth: '+dbirth+'\r\nstreat: '+streat+'\r\nshkola: '+shkola+'\rnznaniya: '+znaniya+'\r\nnapralenie: '+napralenie+'\r\nlogin: '+login);
+
+}
+
+
+	
+	}
+
+</script>
+</body>
+</html>

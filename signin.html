@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Вход</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	<script type="text/javascript" src='./resources/js/Data.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div style="text-align: center;margin-left: 30%;margin-right: 30%;margin-top: 7%;z-index: -1; position: absolute;background-color: yellowgreen">
+	<p style="text-align: center;" id='flash'></p>
+	<input id='lg' type="text" name="login"  placeholder="Логин" required=""/>
+	<input id='ps' type="password" name="password"  placeholder="Пароль"  required=""/>
+	<input type="submit" id='btn' value="Войти" >
+	
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#btn").bind("click","dblclick", function()
+    {
+    	vhod();
+
+    });
+
+    $("#lg,#ps").bind("change", function()
+    {
+
+    $(this).css("background","red");
+
+    });
+
+
+
+});
+
+function getid(id)
+{
+	return document.getElementById(id);
+}
+
+function chech_password()
+{
+	for (var i = 0; i < users.users.length; i++)
+	{
+		if (getid('lg').value==users.users[i].login&&getid('ps').value==users.users[i].password){
+
+			return true;
+
+		}
+
+	}
+return false;
+}
+
+
+function vhod()
+{
+	
+if (chech_password()==true) 
+{
+	window.location=("./im.html");
+}else
+	getid("flash").style.color="red";
+	getid("flash").innerHTML=("Нет такого пользователя в системе!");		
+}	
+</script>
+</body>
+</html>

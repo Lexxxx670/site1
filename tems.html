@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Темы</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	<script type="text/javascript" src="./resources/js/Data.js"></script>
+</head>
+<body>
+</head>
+<body>
+<nav style="margin:0;" class="nav">
+<ul>
+<script>
+	for (var i = 0; i < ul_index_html.links.length; i++) 
+	{
+		
+		document.write("<li><a href='"+ul_index_html.links[i].link+"'>"+ul_index_html.links[i].name+"</a></li>");
+	}
+</script>
+</ul>
+</nav>
+<section style="margin-left: 20%;margin-right: 20%;margin-top: 7%;color: white;">
+
+<table >
+	<tr>
+	<th>
+		Названия
+	</th>
+	<th>
+		количество задач
+	</th>
+	<th>
+		ссылки для подготовки
+	</th>
+	</tr>
+	<script>
+	for (var i = 0; i < themes.body.length; i++) 
+	{
+		
+		document.write("<tr><td>"+themes.body[i].name+"</td><td>"+themes.body[i].count_task+"</td><td>"+themes.body[i].link+"</td></tr>");
+	}
+</script>
+	
+</table>
+</section>
+</body>
+</html>

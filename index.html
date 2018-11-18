@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Главное</title>
+<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+<script type="text/javascript" src="./resources/js/Data.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(document).mousemove(function(event){
+
+    	var div = $(".what");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+                
+    });
+});
+</script>
+
+
+</head>
+<body>
+<nav style="margin:0;" class="nav">
+<ul>
+<script>
+	for (var i = 0; i < ul_index_html.links.length; i++) 
+	{
+		
+		document.write("<li><a href='"+ul_index_html.links[i].link+"'>"+ul_index_html.links[i].name+"</a></li>");
+	}
+</script>
+</ul>
+</nav>
+<div style="margin-left: 20%;margin-right: 20%;margin-top: 7% ;background-color: white;" class="what">
+<p>
+Данный сайт предназначен для проведения олимпиад по информационным технологиям для школьников
+</p>
+
+</div>
+
+</body>
+</html>
+

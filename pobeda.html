@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Победители</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	<script type="text/javascript" src="./resources/js/Data.js"></script>
+</head>
+<body>
+</head>
+<body>
+<nav style="margin:0;" class="nav">
+<ul>
+<script>
+	for (var i = 0; i < ul_index_html.links.length; i++) 
+	{
+		
+		document.write("<li><a href='"+ul_index_html.links[i].link+"'>"+ul_index_html.links[i].name+"</a></li>");
+	}
+</script>
+</ul>
+</nav>
+
+<section style="margin-left: 20%;margin-right: 20%;margin-top: 7%;background-color: yellowgreen">
+	
+
+<table >
+	<tr>
+		<th>
+			Ф.И.О
+		</th>
+		<th>
+			Логин
+		</th>
+		<th>
+			Тема
+		</th>
+		<th>
+			Место
+		</th>
+	</tr>
+	
+<script>
+	
+
+	for (var i = 0; i < vip.users.length; i++) 
+	{
+		
+		document.write("<tr><td>"+vip.users[i].name+"</td><td>"+vip.users[i].login+"</td><td>"+vip.users[i].predmet+"</td><td>"+vip.users[i].status+"</td></tr>");
+	}
+
+
+
+</script>
+
+	
+</table>
+</section>
+</body>
+</html>
